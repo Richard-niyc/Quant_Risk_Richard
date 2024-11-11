@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import requests
 import pandas as pd
 import numpy as np
@@ -274,10 +268,3 @@ start_date = pd.Timestamp.now() - pd.Timedelta(days=365)
 end_date = pd.Timestamp.now()
 analysis = CryptoRiskAnalysis(assets, start_date, end_date)
 analysis.run_analysis()
-
-
-# In[ ]:
-
-
-
-
