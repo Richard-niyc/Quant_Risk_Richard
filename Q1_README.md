@@ -4,7 +4,7 @@
 This project retrieves Bitcoin (BTC) options data from Deribit, extracts implied volatilities, and visualizes the implied volatility surface using a 3D graph. The results are saved for future reference, and the entire process can be automated with minimal manual intervention.
 
 ## 2. Requirements
-- Python 3.x
+- Python 3.8 or higher
 - Libraries:
   - `requests`
   - `matplotlib`
