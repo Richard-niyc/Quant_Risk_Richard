@@ -16,7 +16,7 @@ This project is a Python script that monitors Uniswap pending transactions on th
 ### Prerequisites
 
 - Python 3.8 or higher
-- Libraries:
+- The following Python packages are required:
   - `requests`
   - `web3`
   - `json`
