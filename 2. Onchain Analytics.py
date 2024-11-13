@@ -10,7 +10,7 @@ class AlchemyTransactionMonitor:
         if not self.w3.is_connected():
             raise ConnectionError("Unable to connect to Ethereum network.")
 
-        # Load Uniswap V3 router contract address
+        # Return Uniswap V3 router address which is checksummed according to EIP-55 standards
         self.uniswap_router_address = Web3.to_checksum_address(uniswap_router_address)
 
         # Uniswap V3 router ABI, which is loaded in 'main'
@@ -108,6 +108,8 @@ class AlchemyTransactionMonitor:
 if __name__ == "__main__":
     YOUR_ALCHEMY_API_KEY = "jWUkgPqjx-Tk3W0DFm7drmMqx8pXNo0V"
     YOUR_ETHERSCAN_API_KEY = "79BRD8M6PUTES9DEVH92WI5PWC46MVI4FB"
+
+    # Uniswap V3 router address
     uniswap_router_address = "0xE592427A0AEce92De3Edee1F18E0157C05861564"
 
     alchemy_http_url = "https://eth-mainnet.alchemyapi.io/v2/" + YOUR_ALCHEMY_API_KEY
