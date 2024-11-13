@@ -2,9 +2,7 @@
 
 ## Overview
 
-This project is a Python-based framework designed for analyzing the risk associated with different crypto assets, as well as their relationships with macroeconomic factors, such as the S&P 500 index. It creates various risk factors including Volatility Clustering, Market Liquidity, Inter-Asset Correlation, Macro Sensitivity, and performs various analyses with models including multivariate regression, Principal Component Analysis (PCA) and stress testing. The project also generates visualizations to help understand these factors.
-
-The goal of this project is to provide insights into crypto asset risks, focusing on macro sensitivity, asset correlations, and responses to extreme scenarios.
+This project is to perform risk factor analysis on a set of crypto assets. It collects crypto assts and macro data through APIs, prepocesses the data, computes various risk factors including Volatility Clustering, Market Liquidity and Inter-Asset Correlation, analyzes Macro Sensitivity and correlations, and performs various Factor models including multivariate regression, Principal Component Analysis (PCA) and stress testing. The project also generates visualizations to help understand these factors and modelling results.
 
 ## Features
 
