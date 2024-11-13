@@ -13,7 +13,7 @@ class AlchemyTransactionMonitor:
         # Load Uniswap V3 router contract address
         self.uniswap_router_address = Web3.to_checksum_address(uniswap_router_address)
 
-        # Load Uniswap V3 router ABI
+        # Uniswap V3 router ABI, which is loaded in 'main'
         self.uniswap_router_abi = router_abi
             
         # Initialize contract instance
@@ -112,6 +112,8 @@ if __name__ == "__main__":
 
     alchemy_http_url = "https://eth-mainnet.alchemyapi.io/v2/" + YOUR_ALCHEMY_API_KEY
     ABI_URL = "https://api.etherscan.io/api?chainid=1&module=contract&action=getabi&address=" + uniswap_router_address + "&apikey=" + YOUR_ETHERSCAN_API_KEY
+    
+    # Load Uniswap V3 router ABI
     try:
         response = requests.get(ABI_URL).json()
         router_abi = json.loads(response['result'])
