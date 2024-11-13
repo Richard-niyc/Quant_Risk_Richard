@@ -2,14 +2,16 @@
 
 ## Overview
 
-This project is a Python script that monitors Uniswap pending transactions on the Ethereum mainnet. It uses Alchemy as an Ethereum node provider and Etherscan for retrieving the ABI of the Uniswap V3 router.
+This project is a Python script that monitors Uniswap pending transactions on the Ethereum mainnet. It uses Alchemy as an Ethereum node provider and Etherscan for retrieving the ABI of the Uniswap V3 router. It retrieves and decodes pending transactions directed to the Uniswap V3 router.
 
 ## Features
 
 - Connects to the Ethereum network using Alchemy's HTTP API.
-- Monitors pending transactions in real-time and decodes interactions with the Uniswap V3 Router.
+- Load the Uniswap V3 SwapRouter contract address and its ABI .
+- Monitoring: Retrives and decodes pending transactions in real-time directed to the Uniswap V3 router.
 - Handles Uniswap multicall transactions to decode each sub-call.
 - Retry mechanism for improved reliability in network requests.
+- Error Handling.
 
 ## Setup Instructions
 
