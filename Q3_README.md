@@ -2,12 +2,12 @@
 
 ## Overview
 
-This project is to perform risk factor analysis on a set of crypto assets. It collects crypto assts and macro data through APIs, prepocesses the data, computes various risk factors including Volatility Clustering, Market Liquidity and Inter-Asset Correlation, analyzes Macro Sensitivity and correlations, and performs various Factor models including multivariate regression, Principal Component Analysis (PCA) and stress testing. The project also generates visualizations to help understand these factors and modelling results.
+This project is to perform risk factor analysis on a set of crypto assets. It collects crypto assts and macro data through APIs, prepocesses the data, computes various risk factors including Volatility Clustering, Market Liquidity and Inter-Asset Correlation, analyzes Macro Sensitivity, generate correlation matrices, and performs various Factor models including multivariate regression, Principal Component Analysis (PCA) and stress testing. The project also generates visualizations to help understand these factors and modelling results.
 
 ## Features
 
 - Fetch crypto assets and S&P 500 data from CoinGecko and Yahoo Finance APIs
-- Compute market liquidity and volatility clustering for crypto assets
+- Compute market liquidity, volatility clustering, and Inter-Asset Correlation for crypto assets
 - Analyze Macro Sensitivity for crypto assets
 - Generate correlation matrices for different crypto assets
 - Implement multivariate regression to identify risk factors
