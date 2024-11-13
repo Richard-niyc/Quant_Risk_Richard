@@ -160,8 +160,8 @@ class CryptoRiskAnalysis:
                 plt.xlabel('Date')
                 plt.ylabel('Return')
                 plt.title(f'Macro Sensitivity of {asset} Over Time')
-                plt.savefig(f"Macro Sensitivity of {asset} Over Time.png")
                 plt.legend()
+                plt.savefig(f"Macro Sensitivity of {asset} Over Time.png")
                 plt.show()
     
     def plot_correlations(self):
