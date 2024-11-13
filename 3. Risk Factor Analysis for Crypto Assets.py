@@ -90,16 +90,21 @@ class CryptoRiskAnalysis:
             try:
                 file_path = f"{asset}.csv"
                 if asset != 'sp500':
+                    # Read crypto assets data
                     self.data[asset] = pd.read_csv(file_path, index_col='date', parse_dates=True)
+                    # The start date and end date of sp500 data reindexing matches with the start date and end date of crypto asset
                     reindex_start = self.data[asset].index[0]
                     reindex_end = self.data[asset].index[-1]
                 else:
+                    # Read sp500 data
                     self.data[asset] = pd.read_csv(file_path, index_col='date', parse_dates=True)
                     # Fill non-business day gaps with the previous business day's data
                     self.data[asset] = self.data[asset].reindex(pd.date_range(reindex_start, reindex_end, freq='D'), method='ffill')
             except FileNotFoundError:
                 print(f"CSV file for {asset} not found at {file_path}.")
                 self.data[asset] = None
+
+        # match the dataframe index of sp500 with the dataframe index of crypto asset
         self.data['sp500'].index = self.data['bitcoin'].index
     
     def preprocess_data(self):
